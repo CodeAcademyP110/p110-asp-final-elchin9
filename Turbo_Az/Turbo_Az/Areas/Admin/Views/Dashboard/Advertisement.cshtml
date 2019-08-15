@@ -1,0 +1,76 @@
+﻿
+@{
+    @model IEnumerable<Advertisement>
+    ViewData["Title"] = "Advertisement";
+}
+
+<!-- MAIN CONTENT-->
+<div class="page-container">
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Elanlar</h2>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>Shekil</th>
+                        <th>Marka</th>
+                        <th>Model</th>
+                        <th>Qiymet</th>
+                        <th>Ili</th>
+                        <th>Yanacaq</th>
+                        <th>Rengi</th>
+                        <th>VIP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var n in Model)
+                    {
+                    <tr>
+                        <td>
+                            <img src="~/images/@n.PhotoURL" style="width:150px; border:2px solid white;" />
+                        </td>
+                        <td>
+                            <p>@n.Model.Brand.Name</p>
+                        </td>
+                        <td>
+                            <p>@n.Model.Name</p>
+                        </td>
+                        <td>
+                            <p>@n.Price</p>
+                        </td>
+                        <td>
+                            <p>@n.GradiuationYear.Year</p>
+                        </td>
+                        <td>
+                            <p>@n.Fuel.CarFuel</p>
+                        </td>
+                        <td>
+                            <p>@n.Color.CarColor</p>
+                        </td>
+                        <td>
+                            @if (n.IsVip == true)
+                            {
+                                <div style="width:10px; height:10px; background:green; border-radius:50%;"></div>
+                            }
+                            else
+                            {
+                                <div style="width:10px; height:10px; background:red; border-radius:50%;"></div>
+                            }
+
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT-->

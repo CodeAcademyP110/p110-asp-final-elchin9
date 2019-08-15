@@ -1,0 +1,116 @@
+﻿@model Advertisement
+
+<!--Elan yerlesdirmek-->
+<section>
+    <div class="wrapper my-custom-ad">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h2>Elan Yerlesdir :</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form method="post" style="margin-top: 30px;">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="col-6 mt-2">
+                            <div class="form-group" style="margin-top:50px;">
+                                <label>Marka</label>
+                                <select style="width:100%;"  class="form-control" id="brands" asp-items="@(new SelectList(ViewBag.Brand, "Id", "Name"))">
+                                    <option value="">Secin</option>
+                                </select>
+                                <span asp-validation-for="Model.Brand" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="ModelId">Model</label>
+                                <select style="width:100%;"  class="form-control" asp-for="ModelId">
+                                    <option value="">Secin</option>
+                                </select>
+                                <span asp-validation-for="ModelId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="Hiking">Yürüyüş</label>
+                                <input  style="width:100%;"  class="form-control" asp-for="Hiking">
+                                <span asp-validation-for="Hiking" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="ColorId">Rəng</label>
+                                <select style="width:100%;"  class="form-control" asp-items="@(new SelectList(ViewBag.Colors,"Id","CarColor"))" asp-for="ColorId">
+                                    <option>Secin</option>
+                                </select>
+                                <span asp-validation-for="ColorId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="Price"> Qiymət</label>
+                                <input style="width:100%;"  class="form-control price" type="number" asp-for="Price">
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="CityId">Şəhər</label>
+                                <select class="form-control" style="width:100%;"  asp-items="@(new SelectList(ViewBag.Cities,"Id","Name"))" asp-for="CityId">
+                                    <option>Secin</option>
+                                </select>
+                                <span asp-validation-for="CityId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6 mt-2">
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="FuelId">Yanacaq növü</label>
+                                <select class="form-control" style="width:100%;"  asp-items="@(new SelectList(ViewBag.Fuels,"Id","CarFuel"))" asp-for="FuelId">
+                                    <option>Secin</option>
+                                </select>
+                                <span asp-validation-for="FuelId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="SpeedId">Sürət Qutusu</label>
+                                <select class="form-control" style="width:100%;"  asp-items="@(new SelectList(ViewBag.Speeds,"Id","CarSpeed"))" asp-for="SpeedId">
+                                    <option>Secin</option>
+                                </select>
+                                <span asp-validation-for="SpeedId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="GradiuationYearId">İl</label>
+                                <select class="form-control" style="width:100%;"  asp-items="@(new SelectList(ViewBag.GraduationYears,"Id","Year"))" asp-for="GradiuationYearId">
+                                    <option>Secin</option>
+                                </select>
+                                <span asp-validation-for="GradiuationYearId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group " style="margin-top:50px;">
+                                <label asp-for="MachinePowerId">Mühərrikin Həcmi</label>
+                                <select class="form-control" style="width:100%;" asp-items="@(new SelectList(ViewBag.MachinePowers,"Id","Power"))" asp-for="MachinePowerId">
+                                    <option>Secin</option>
+                                </select>
+                                <span asp-validation-for="MachinePowerId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="margin-top:50px;">
+                                <label asp-for="CarInfo">Ətraflı Məlumat</label>
+                                <textarea rows="7" style="width:100%;" asp-for="CarInfo"></textarea>
+                                <span asp-validation-for="CarInfo" class="text-danger"></span>
+                            </div>
+                        </div>
+                       
+
+                        <input style="margin-top: 30px;" type="submit" class="btn btn-success btn-block" value="Add" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+</section>
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,425 @@
+﻿@model Advertisement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<section>
+    <div class="container">
+        <div class="row" style="background:black ">
+            <div class="col-6">
+                <img src="~/images/@Model.PhotoURL" class="ElanImg img-fluid" style="width: 100%">
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col">
+                        <img src="~/images/bmw.jpg" class="ElanImg img-fluid" style="width: 100%">
+                    </div>
+                    <div class="col">
+                        <img src="~/images/bmw.jpg" class="ElanImg img-fluid" style="width: 100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Şəhər</td>
+                            <td>@Model.City.Name</td>
+                        </tr>
+                        <tr>
+                            <td>Marka</td>
+                            <td>@Model.Model.Brand.Name</td>
+                        </tr>
+                        <tr>
+                            <td>Buraxılış ili</td>
+                            <td>@Model.GradiuationYear.Year</td>
+                        </tr>
+                        <tr>
+                            <td>Rəng</td>
+                            <td>@Model.Color.CarColor</td>
+                        </tr>
+                        <tr>
+                            <td>Mühərrikin həcmi</td>
+                            <td>@Model.MachinePower.Power</td>
+                        </tr>
+                        <tr>
+                            <td>Yanacaq növü</td>
+                            <td>@Model.Fuel.CarFuel</td>
+                        </tr>
+                        <tr>
+                            <td>Yürüş</td>
+                            <td>@Model.Hiking</td>
+                        </tr>
+                        <tr>
+                            <td>Sürətlər qutusu</td>
+                            <td>@Model.Speed.CarSpeed</td>
+                        </tr>
+                        <tr>
+                            <td>Qiymət</td>
+                            <td>@Model.Price</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-6">
+                <h3>About</h3>
+                <p>@Model.CarInfo</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="wrapper">
+        <div class="products">
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img src="https://turbo.azstatic.com/uploads/f460x343/2019%2F01%2F30%2F11%2F58%2F34%2Fafcc9d40-7c7d-448f-a7f7-b9f5fc2a5d1e%2F23118_52j_bhYOFSyf5vjlzKv4UQ.jpg"
+                         alt="">
+                    <div class="productPrice">
+                        26 700 <span>AZN</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Land Rover Discovery</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2006 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                2.7 L
+                                <span></span>
+                            </p>
+                            <p class="km">231 000 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 17 fevral 2019 <i class="fas fa-gem"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="Mercedes ML 270"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2019%2F02%2F19%2F17%2F50%2F49%2Fca9af98f-e1a3-4b62-b3ea-c06b32add0dc%2F62509_Zr_a7fPnvNP3lpeaRMa6Ug.jpg">
+                    <div class="productPrice">
+                        26 700 <span>AZN</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Mercedes ML 270</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2003 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                2.7 L
+                                <span></span>
+                            </p>
+                            <p class="km">331 250 km </p>
+                        </div>
+                        <div class="enterDay">Gence, Bugun 18:00 <i class="fas fa-gem"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="BMW 528"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2019%2F02%2F06%2F01%2F41%2F47%2Fe4e1c946-d637-4647-833c-9fd6b7076a8f%2F71458_r3F2rZ_f1hJa3gRCmxj-og.jpg">
+                    <div class="productPrice">
+                        34 800 <span>$</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">BMW 528</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2006 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                2.0 L
+                                <span></span>
+                            </p>
+                            <p class="km">33 070 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 05 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="Mercedes Viano"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2018%2F12%2F24%2F15%2F24%2F02%2F26b178f0-2b30-4e0d-9ce0-41626ab80c94%2F64031_dT0G24aevkWFNFhaJ3dz7Q.jpg">
+                    <div class="productPrice">
+                        60 000 <span>$</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Mercedes Viano</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2013 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                3.5 L
+                                <span></span>
+                            </p>
+                            <p class="km">28 970 km </p>
+                        </div>
+                        <div class="enterDay">Bu gun 15:43 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="Mitsubishi Pajero"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2019%2F01%2F15%2F19%2F02%2F37%2F0da41b28-aeb3-4c6e-8ccb-34708f3ef34a%2F43992_S1kmbdzqiktzzTyotg4hdg.jpg">
+                    <div class="productPrice">
+                        22 000 <span>AZN</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Mitsubishi Pajero</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2006 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                3 L
+                                <span></span>
+                            </p>
+                            <p class="km">160 000 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 02 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img src="https://turbo.azstatic.com/uploads/f460x343/2018%2F10%2F28%2F18%2F35%2F26%2F7be9eb0b-dd3a-41dc-803f-90ef8f5e041b%2F65966_Mjui3okmrzKKDQC1GoPNQg.jpg"
+                         alt="">
+                    <div class="productPrice">
+                        48 900 <span>$</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Mercedes E 220</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2016 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                2.0 L
+                                <span></span>
+                            </p>
+                            <p class="km">46 000 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 15 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img src="https://turbo.azstatic.com/uploads/f460x343/2019%2F01%2F24%2F12%2F29%2F52%2Ff355c65c-74e4-47fb-b7f1-e12243a478fe%2F12007_BJCJbRaT1TkZjc_9G3S45w.jpg"
+                         alt="Galenvagen">
+                    <div class="productPrice">
+                        83 200 <span>$</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Mercedes G 350</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2013 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                3.5 L
+                                <span></span>
+                            </p>
+                            <p class="km">61 000 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 13 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img src="https://turbo.azstatic.com/uploads/f460x343/2019%2F02%2F04%2F15%2F36%2F12%2F1eb7f997-c6c5-46bb-8aaa-5e75740399d9%2F35798_aY7O0CEViPNXYGqqctWDQA.jpg"
+                         alt="">
+                    <div class="productPrice">
+                        38 900 <span>AZN</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Hundai Sonata</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2019 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                2.0 L
+                                <span></span>
+                            </p>
+                            <p class="km">0 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 10 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="Suzuki GSF 250 Bandit"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2019%2F02%2F19%2F18%2F00%2F53%2F071d5a42-d9ba-49db-be38-3bd00faf9242%2F74752_u4Gk0NGe7FVFn-govU1Fiw.jpg">
+                    <div class="productPrice">
+                        2 000 <span>AZN</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Suzuki GSF 250 Bandit</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2005 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                0.3 L
+                                <span></span>
+                            </p>
+                            <p class="km">20 000 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 08 yanvar 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="Audi A4"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2019%2F02%2F19%2F18%2F04%2F51%2F2ba57138-aa13-469a-ae77-796c8a86dbbc%2F28361_46Wv0kprsQNRYmFnWTuE2Q.jpg">
+                    <div class="productPrice">
+                        21 900 <span>$</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Audi A4</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2010 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                2.0 L
+                                <span></span>
+                            </p>
+                            <p class="km">165 000 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 14 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="Mercedes E 240"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2019%2F02%2F19%2F18%2F00%2F34%2F63f24fa6-77d2-403a-aa93-b2b2f6afcf22%2F7353_haDyMi5s6ysV5G97rqf10Q.jpg">
+                    <div class="productPrice">
+                        15 200 <span>AZN</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Mercedes E 240</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2001 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                2.6 L
+                                <span></span>
+                            </p>
+                            <p class="km">250 000 km </p>
+                        </div>
+                        <div class="enterDay">Baki, 13 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img alt="Toyota Land Cruiser"
+                         src="https://turbo.azstatic.com/uploads/f460x343/2018%2F10%2F04%2F19%2F22%2F26%2F09c13655-433d-4276-9cc1-46927546c912%2F42149_zsM_ohRMAfnpE_3GKp1w6Q.jpg">
+                    <div class="productPrice">
+                        11 900 <span>$</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">Toyota Land Cruiser</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                2000 il
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                4.7 L
+                                <span></span>
+                            </p>
+                            <p class="km">248 000 km </p>
+                        </div>
+                        <div class="enterDay">Yevlax, 20 fevral 2019 <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>

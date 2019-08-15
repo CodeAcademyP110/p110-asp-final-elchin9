@@ -1,0 +1,21 @@
+﻿@{
+    @model News
+    ViewData["Title"] = "About";
+}
+
+<section class="wrapper">
+
+    <div class="nd-content">
+        <div class="nd-image">
+            <img src="~/images/@Model.PhotoURL" />
+        </div>
+        <div class="nd-info">
+            <h3>@Model.Title</h3>
+            <p>@Model.MainInfo</p>
+        </div>
+        <div class="footer-info">
+            <p>@Model.Time</p>
+        </div>
+    </div>
+
+</section>

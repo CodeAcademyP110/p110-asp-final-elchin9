@@ -1,0 +1,26 @@
+﻿
+@{
+    @model IEnumerable<News>
+    ViewData["Title"] = "About";
+}
+
+<section class="wrapper">
+    @foreach(var n in Model)
+    {
+        <div class="container-companies">
+            <a class="compani-stor" asp-action="NewsDetails" asp-route-id="@n.Id">
+                <div class="compani">
+                    <div class="compani-logo">
+                        <img src="~/images/@n.PhotoURL"/>
+                    </div>
+                    <div class="compani-contents">
+                        <p class="compani-contents-Name">@n.Title</p>
+                        <span>@n.Time</span>
+                        <p class="compani-contents-location">@n.ShortInfo</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+    
+</section>
